@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #0d0b1a;
+  background-image:
+    radial-gradient(ellipse at 15% 15%, #1a0a2e 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 85%, #0a1a0d 0%, transparent 55%);
+  font-family: 'Lato', sans-serif;
+  color: #e8e0f8;
+  padding: 2rem 1rem;
+}
+
+/* ── Cabeçalho ── */
+.hp-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hp-crest {
+  font-size: 2.8rem;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.hp-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #d4af37;
+  letter-spacing: 0.06em;
+}
+
+.hp-subtitle {
+  font-size: 0.72rem;
+  color: #7a6a9a;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+/* ── Divisor dourado ── */
+.hp-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #4a3a6e, #d4af37, #4a3a6e, transparent);
+  margin: 1.25rem 0 1.75rem;
+}
+
+/* ── Barra de ferramentas ── */
+.hp-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 960px;
+  margin: 0 auto 1.25rem;
+}
+
+.hp-btn-new {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 20px;
+  background: linear-gradient(135deg, #4a2070, #7b3fa0, #4a2070);
+  background-size: 200%;
+  border: 1px solid #9b5fcc;
+  border-radius: 8px;
+  color: #f0e6ff;
+  font-family: 'Cinzel', serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: background-position 0.3s, transform 0.1s;
+}
+
+.hp-btn-new:hover {
+  background-position: right center;
+  transform: translateY(-1px);
+}
+
+/* ── Container da tabela — scroll horizontal ── */
+.hp-table-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  background: rgba(18, 14, 36, 0.92);
+  border: 1px solid #4a3a6e;
+  border-radius: 14px;
+  overflow-x: auto;          /* scroll lateral quando a tabela não couber */
+  -webkit-overflow-scrolling: touch;
+  box-shadow:
+    0 0 50px rgba(100, 60, 200, 0.12),
+    inset 0 1px 0 rgba(180, 130, 255, 0.07);
+}
+
+/* ── Tabela ── */
+.hp-table {
+  width: 100%;
+  min-width: 760px;          /* garante que todas as colunas apareçam */
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.hp-table thead tr {
+  background: rgba(74, 42, 112, 0.55);
+  border-bottom: 1px solid #4a3a6e;
+}
+
+.hp-table th {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #d4af37;
+  text-transform: uppercase;
+  padding: 13px 14px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.hp-table tbody tr {
+  border-bottom: 1px solid rgba(74, 58, 110, 0.35);
+  transition: background 0.18s;
+}
+
+.hp-table tbody tr:last-child { border-bottom: none; }
+
+.hp-table tbody tr:hover {
+  background: rgba(74, 42, 112, 0.22);
+}
+
+.hp-table td {
+  padding: 11px 14px;
+  color: #ccc0e8;
+  vertical-align: middle;
+  white-space: nowrap;       /* impede que o conteúdo quebre e suma */
+}
+
+/* ── Células especiais ── */
+.hp-td-id {
+  color: #6a5a8a;
+  font-size: 0.78rem;
+}
+
+.hp-td-name {
+  font-weight: 700;
+  color: #e8e0f8;
+  white-space: normal;       /* nome pode quebrar linha normalmente */
+}
+
+.hp-td-empty {
+  text-align: center;
+  color: #5a4a7a;
+  font-style: italic;
+  padding: 2rem;
+  white-space: normal;
+}
+
+/* ── Badges ── */
+.hp-badge {
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 3px 8px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.hp-badge-tipo {
+  background: rgba(80, 50, 140, 0.45);
+  border: 1px solid #6a4aae;
+  color: #c0a0f0;
+}
+
+.hp-badge-facil {
+  background: rgba(20, 70, 30, 0.4);
+  border: 1px solid #2d6e3a;
+  color: #7ecf7e;
+}
+
+.hp-badge-medio {
+  background: rgba(90, 70, 10, 0.4);
+  border: 1px solid #8a6e1a;
+  color: #e0c060;
+}
+
+.hp-badge-dificil {
+  background: rgba(130, 50, 10, 0.4);
+  border: 1px solid #a04020;
+  color: #f09060;
+}
+
+.hp-badge-muito-dificil {
+  background: rgba(120, 15, 15, 0.4);
+  border: 1px solid #8b2020;
+  color: #e87070;
+}
+
+.hp-badge-proibido-sim {
+  background: rgba(120, 15, 15, 0.4);
+  border: 1px solid #8b2020;
+  color: #e87070;
+}
+
+.hp-badge-proibido-nao {
+  background: rgba(20, 60, 20, 0.4);
+  border: 1px solid #2d5a2d;
+  color: #7ecf7e;
+}
+
+/* ── Botões de ação ── */
+.hp-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.hp-btn-edit,
+.hp-btn-del {
+  padding: 5px 12px;
+  background: transparent;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  transition: border-color 0.18s, color 0.18s;
+}
+
+.hp-btn-edit {
+  border: 1px solid #4a5a9e;
+  color: #90a0e0;
+}
+
+.hp-btn-edit:hover {
+  border-color: #7080c0;
+  color: #c0d0ff;
+}
+
+.hp-btn-del {
+  border: 1px solid #6e2a2a;
+  color: #c07070;
+}
+
+.hp-btn-del:hover {
+  border-color: #ae4040;
+  color: #e89090;
+}
+
+/* ── Responsivo ── */
+@media (max-width: 700px) {
+  .hp-table-wrap { border-radius: 10px; }
+  .hp-table th   { font-size: 0.65rem; padding: 10px 10px; }
+  .hp-table td   { padding: 9px 10px;  font-size: 0.78rem; }
+  .hp-title      { font-size: 1.3rem; }
+}
